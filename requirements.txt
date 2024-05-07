@@ -1,2 +1,12 @@
-webargs>=5.5.2
-deepaas>=1.3.0
+# The following is added by the migration.sh script #
+# Versions are taken from the relevant docker image #
+#
+
+webargs~=5.5.3
+deepaas~=2.2.0
+flaat~=0.8.0
+
+# Below is the old content of requirements.txt
+#
+#webargs>=5.5.2
+#deepaas>=1.3.0

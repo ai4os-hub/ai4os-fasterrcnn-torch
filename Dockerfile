@@ -16,12 +16,12 @@ ARG tag=1.13.1-cuda11.6-cudnn8-runtime
 # Base image, e.g. tensorflow/tensorflow:2.9.1
 FROM pytorch/pytorch:${tag}
 
-LABEL maintainer='Fahimeh'
-LABEL version='0.0.1'
+LABEL maintainer='Fahimeh Alibabaei'
+LABEL version='0.1.0'
 # Object detection using FasterRCNN model
 
 # What user branch to clone [!]
-ARG branch=master
+ARG branch=main
 
 # Install Ubuntu packages
 # - gcc is needed in Pytorch images because deepaas installation might break otherwise (see docs) (it is already installed in tensorflow images)
@@ -63,29 +63,23 @@ ENV RCLONE_CONFIG=/srv/.rclone/rclone.conf
 
 # Initialization scripts
 # deep-start can install JupyterLab or VSCode if requested
-RUN git clone https://github.com/deephdc/deep-start /srv/.deep-start && \
+RUN git clone https://github.com/ai4os/deep-start /srv/.deep-start && \
     ln -s /srv/.deep-start/deep-start.sh /usr/local/bin/deep-start
 
 # Necessary for the Jupyter Lab terminal
 ENV SHELL /bin/bash
 
 # Install user app
-RUN git clone --depth 1 -b $branch https://github.com/deephdc/fasterrcnn_pytorch_api.git && \
-    cd  fasterrcnn_pytorch_api && \
+RUN git clone --depth 1 -b $branch https://github.com/ai4os-hub/ai4os-fasterrcnn-torch.git && \
+    cd  ai4os-fasterrcnn-torch && \
     git submodule init && \  
     git submodule update --remote --merge  && \
     pip3 install --no-cache-dir -e ./fasterrcnn_pytorch_training_pipeline && \
     pip3 install --no-cache-dir -e . && \
     cd ..
 
-# Install currently exp version of deepaas (after the app!):
-#RUN git clone --depth 1 -b update_cli https://github.com/indigo-dc/DEEPaaS.git && \
-#    cd DEEPaaS && \
-#    pip3 install --no-cache-dir -e . &&\
-#    cd ..
-     
-# Open ports: DEEPaaS (5000), Monitoring (6006), Jupyter (8888)
+# Open ports (deepaas, monitoring, ide)
 EXPOSE 5000 6006 8888
 
 # Launch deepaas
-CMD [ "deepaas-run", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
+CMD ["deepaas-run", "--listen-ip", "0.0.0.0", "--listen-port", "5000"]
