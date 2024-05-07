@@ -1,8 +1,8 @@
 {
   "title": "Object detection with FasterRCNN",
-  "summary": "Object detection using FasterRCNN model(s) (fasterrcnn_pytorch_api)",
+  "summary": "Object detection using FasterRCNN model(s) (ai4os-fasterrcnn-torch)",
   "description": [
-    "The module, fasterrcnn_pytorch_api, provides API access to the pipeline [1] for training FasterRCNN [2] models on custom datasets.",
+    "The module, ai4os-fasterrcnn-torch, provides API access to the pipeline [1] for training FasterRCNN [2] models on custom datasets.",
     "The pipeline is implemented in [PyTorch](https://pytorch.org/).\n",
     "With this pipeline, you have the flexibility to choose between official PyTorch models trained on the COCO dataset [3], use any backbone from ",
     "Torchvision classification models, or even define your own custom backbones. The trained models can be used for object detection tasks on your specific datasets.\n",

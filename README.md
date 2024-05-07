@@ -1,4 +1,4 @@
-# fasterrcnn_pytorch_api
+# ai4os-fasterrcnn-torch
 
 [![Build Status](https://jenkins.services.ai4os.eu/buildStatus/icon?job=AI4OS-hub/ai4os-fasterrcnn-torch/main)](https://jenkins.services.ai4os.eu/job/AI4OS-hub/job/ai4os-fasterrcnn-torch/job/main/)
 
@@ -23,8 +23,8 @@ In this repository, we have integrated a DeepaaS API into the existing codebase,
 To launch the API, first, install the package, and then run [DeepaaS](https://github.com/ai4os/DEEPaaS):
 
 ```bash
-git clone --depth 1 https://codebase.helmholtz.cloud/m-team/ai/fasterrcnn_pytorch_api.git
-cd fasterrcnn_pytorch_api
+git clone --depth 1 https://codebase.helmholtz.cloud/m-team/ai/ai4os-fasterrcnn-torch.git
+cd ai4os-fasterrcnn-torch
 git submodule init
 git submodule update --remote --merge
 pip install -e ./path/to/submodule/dir
@@ -38,8 +38,6 @@ apt install -y gcc
 apt install -y libgl1
 apt install -y libglib2.0-0
 ```
-
-><span style="color:Blue">**Note:**</span>  The associated Docker container for this module can be found at: https://codebase.helmholtz.cloud/m-team/ai/DEEP-OC-fasterrcnn_pytorch_api.git
 
 ## Project Structure
 
@@ -95,7 +93,7 @@ data
 The `config.yaml` file contains the following information about the data:
 
 ```yaml
-# Images and labels directory should be insade 'fasterrcnn_pytorch_api/data' directory.
+# Images and labels directory should be inside 'ai4os-fasterrcnn-torch/data' directory.
 TRAIN_DIR_IMAGES: 'my_dataset/train_imgs'
 TRAIN_DIR_LABELS: 'my_dataset/train_labels'
 VALID_DIR_IMAGES: 'my_dataset/valid_imgs'
@@ -176,7 +174,7 @@ Weights & Biases ([wandb](https://wandb.ai/)) simplifies the process of tracking
 1. Sign up in [here](https://wandb.ai/).
 2. Copy Your API key for logging in to the wandb library.
 3. change the value of disable_wandb in the training arguments to False.
-4. In the `./fasterrcnn_pytorch_api/fasterrcnn_pytorch_api/configs/setting.ini` file, set the following parameter
+4. In the `./ai4os-fasterrcnn-torch/fasterrcnn_pytorch_api/configs/setting.ini` file, set the following parameter
 ```
 [wandb_token]
 #your token to save and monitor your training model in the wandb
@@ -201,7 +199,7 @@ You can utilize the Swagger interface to upload your images or videos and obtain
 # Use rclone to copy from remote
 
 If you want to use rclone to download trained models from nextcloud
-set  `use_rclone` in the `./fasterrcnn_pytorch_api/fasterrcnn_pytorch_api/configs/setting.ini` to true and pass the path to your model directory on the nextcloud
+set  `use_rclone` in the `./ai4os-fasterrcnn-torch/fasterrcnn_pytorch_api/configs/setting.ini` to true and pass the path to your model directory on the nextcloud
 in the remote variable. 
 ```
 [use_rclone]

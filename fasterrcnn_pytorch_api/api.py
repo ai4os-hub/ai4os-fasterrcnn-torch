@@ -20,8 +20,8 @@ For example:
 To start populating this file, take a look at the docs [1] and
 at a canonical exemplar module [2].
 
-[1]: https://docs.deep-hybrid-datacloud.eu/
-[2]: https://github.com/deephdc/demo_app
+[1]: https://docs.ai4os.eu/
+[2]: https://github.com/ai4os-hub/ai4os-demo-app
 """
 
 import logging
