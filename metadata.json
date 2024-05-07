@@ -1,0 +1,53 @@
+{
+    "title": "Object detection with FasterRCNN",
+    "summary": "Object detection using FasterRCNN model(s) (fasterrcnn_pytorch_api)",
+    "description": [
+        "The module, fasterrcnn_pytorch_api, provides API access to the pipeline [1] for training FasterRCNN [2] models on custom datasets.",
+        "The pipeline is implemented in [PyTorch](https://pytorch.org/).\n",
+        "With this pipeline, you have the flexibility to choose between official PyTorch models trained on the COCO dataset [3], use any backbone from ",
+        "Torchvision classification models, or even define your own custom backbones. The trained models can be used for object detection tasks on your specific datasets.\n",
+        "The original pipeline is developed in the external repository [1]\n",
+
+        "**References**\n",
+        "[1] https://github.com/sovit-123/fasterrcnn-pytorch-training-pipeline\n",
+        "[2] Ren, S., et al, Faster R-CNN: Towards real-time object detection with region proposal networks, 2015, https://arxiv.org/abs/1506.01497 [cs.CV]\n",
+        "[3] Lin, T.Y., et al., Microsoft COCO: Common Objects in Context, 2014, http://arxiv.org/abs/1405.0312 [cs.CV]"
+    ],
+    "keywords": [
+        "docker",
+        "api-v2",
+        "pytorch",
+        "faster-rcnn",
+        "object detection",
+        "trainable",
+        "inference",
+        "pre-trained",
+        "image",
+        "video",
+        "general purpose"
+    ],
+    "license": "MIT",
+    "date_creation": "2023-05-04",
+    "sources": {
+		"dockerfile_repo": "https://github.com/deephdc//DEEP-OC-fasterrcnn_pytorch_api",
+		"docker_registry_repo": "deephdc/deep-oc-fasterrcnn_pytorch_api",
+		"code": "https://github.com/deephdc/fasterrcnn_pytorch_api"
+	},
+    "continuous_integration": {
+        "build_status_badge": "https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/DEEP-OC-fasterrcnn_pytorch_api/master",
+        "build_status_url": "https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/DEEP-OC-fasterrcnn_pytorch_api/job/master"
+    },
+    "tosca": [
+        {
+            "title": "Mesos (CPU)",
+            "url": "https://raw.githubusercontent.com/indigo-dc/tosca-templates/master/deep-oc/deep-oc-marathon-webdav.yml",
+            "inputs": [
+                "rclone_conf",
+                "rclone_url",
+                "rclone_vendor",
+                "rclone_user",
+                "rclone_pass"
+            ]
+        }
+    ]
+}
