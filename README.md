@@ -1,6 +1,6 @@
 # fasterrcnn_pytorch_api
 
-[![Build Status](https://jenkins.indigo-datacloud.eu/buildStatus/icon?job=Pipeline-as-code/DEEP-OC-org/fasterrcnn_pytorch_api/master)](https://jenkins.indigo-datacloud.eu/job/Pipeline-as-code/job/DEEP-OC-org/job/fasterrcnn_pytorch_api/job/master)
+[![Build Status](https://jenkins.services.ai4os.eu/buildStatus/icon?job=AI4OS-hub/ai4os-fasterrcnn-torch/main)](https://jenkins.services.ai4os.eu/job/AI4OS-hub/job/ai4os-fasterrcnn-torch/job/main/)
 
 [This external repository](https://github.com/sovit-123/fasterrcnn-pytorch-training-pipeline)  provides a pipeline for training PyTorch FasterRCNN models on custom datasets. With this pipeline, you have the flexibility to choose between official PyTorch models trained on the COCO dataset, use any backbone from Torchvision classification models, or even define your own custom backbones. The trained models can be used for object detection tasks on your specific datasets.
 ## Training and Inference
@@ -20,7 +20,7 @@ In this repository, we have integrated a DeepaaS API into the existing codebase,
 
 ## Install the API and the external submodule requirement
 
-To launch the API, first, install the package, and then run [DeepaaS](https://github.com/indigo-dc/DEEPaaS):
+To launch the API, first, install the package, and then run [DeepaaS](https://github.com/ai4os/DEEPaaS):
 
 ```bash
 git clone --depth 1 https://codebase.helmholtz.cloud/m-team/ai/fasterrcnn_pytorch_api.git
