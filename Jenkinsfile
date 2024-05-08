@@ -8,14 +8,6 @@ pipeline {
     stages {
         stage('Application testing') {
             steps {
-                //checkout scm *with* submodule
-                checkout([
-                    $class: 'GitSCM',
-                    branches: scm.branches,
-                    doGenerateSubmoduleConfigurations: true,
-                    extensions: scm.extensions + [[$class: 'SubmoduleOption', parentCredentials: true]],
-                    userRemoteConfigs: scm.userRemoteConfigs
-                ])
                 script {
                     projectConfig = pipelineConfig()
                     buildStages(projectConfig)

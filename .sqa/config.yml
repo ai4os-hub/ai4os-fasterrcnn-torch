@@ -4,26 +4,38 @@ sqa_criteria:
     repos:
       ai4os-fasterrcnn-torch:
         container: thisrepo-testing
-        tox:
-          tox_file: tox.ini
-          testenv:
-            - qc.sty
+        commands:
+        - sh -c 'git config --global --add safe.directory $PWD/fasterrcnn_pytorch_training_pipeline'
+        - sh -c 'git submodule update --init --remote --recursive'
+        - tox -e qc.sty
+        #tox:
+        #  tox_file: tox.ini
+        #  testenv:
+        #    - qc.sty
   qc_coverage:
     repos:
       ai4os-fasterrcnn-torch:
         container: thisrepo-testing
-        tox:
-          tox_file: tox.ini
-          testenv:
-            - qc.cov
+        commands:
+        - sh -c 'git config --global --add safe.directory $PWD/fasterrcnn_pytorch_training_pipeline'
+        - sh -c 'git submodule update --init --remote --recursive'
+        - tox -e qc.cov
+        #tox:
+        #  tox_file: tox.ini
+        #  testenv:
+        #    - qc.cov
   qc_security:
     repos:
       ai4os-fasterrcnn-torch:
         container: thisrepo-testing
-        tox:
-          tox_file: tox.ini
-          testenv:
-            - qc.sec
+        commands:
+        - sh -c 'git config --global --add safe.directory $PWD/fasterrcnn_pytorch_training_pipeline'
+        - sh -c 'git submodule update --init --remote --recursive'
+        - tox -e qc.sec
+        #tox:
+        #  tox_file: tox.ini
+        #  testenv:
+        #    - qc.sec
 
 environment:
   LANG: C.UTF-8
