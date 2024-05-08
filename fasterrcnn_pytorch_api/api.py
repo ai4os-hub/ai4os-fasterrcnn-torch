@@ -36,6 +36,7 @@ import argparse
 import json
 
 import wandb
+from deepaas.model.v2.wrapper import UploadedFile
 from fasterrcnn_pytorch_api import configs, fields, utils_api
 from fasterrcnn_pytorch_api.scripts.train import main as train_model
 from fasterrcnn_pytorch_api.scripts import combineinfer
