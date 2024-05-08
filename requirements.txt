@@ -4,7 +4,7 @@
 
 webargs~=5.5.3
 deepaas~=2.2.0
-flaat~=0.8.0
+flaat~=1.1.0
 
 # Below is the old content of requirements.txt
 #
