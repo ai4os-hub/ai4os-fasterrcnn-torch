@@ -23,7 +23,7 @@ jobs:
       with:
         fetch-depth: 0
       # only github repos can be used..
-    - uses: vykozlov/git-repo-sync@v0.1.0
+    - uses: ai4os/git-repo-sync@0.1.1
       # FORK of https://github.com/wangchucheng/git-repo-sync.git
       with:
         # You can store token in your project's 'Setting > Secrets' and reference the names here. Such as ${{ secrets.ACCESS\_TOKEN }}
