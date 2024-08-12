@@ -1,0 +1,27 @@
+metadata_version: 2.0.0
+title: Object detection with FasterRCNN
+summary: Object detection using FasterRCNN model(s) (ai4os-fasterrcnn-torch)
+description: '"The module, ai4os-fasterrcnn-torch, provides API access to the pipeline [1] for training FasterRCNN [2] models on custom datasets." "The pipeline is implemented in [PyTorch](https://pytorch.org/).\n" "With this pipeline, you have the flexibility to choose between official PyTorch models trained on the COCO dataset [3], use any backbone from " "Torchvision classification models, or even define your own custom backbones. The trained models can be used for object detection tasks on your specific datasets.\n" "The original pipeline is developed in the external repository [1]\n" "**References**\n" "[1] https://github.com/sovit-123/fasterrcnn-pytorch-training-pipeline\n" "[2] Ren, S., et al, Faster R-CNN: Towards real-time object detection with region proposal networks, 2015, https://arxiv.org/abs/1506.01497 [cs.CV]\n" "[3] Lin, T.Y., et al., Microsoft COCO: Common Objects in Context, 2014, http://arxiv.org/abs/1405.0312 [cs.CV]"'
+dates:
+  created: '2023-05-04'
+  updated: '2024-08-12'
+links:
+  source_code: https://github.com/ai4os-hub/ai4os-fasterrcnn-torch
+  docker_image: ai4oshub/ai4os-fasterrcnn-torch
+  ai4_template: ai4-template/1.9.9
+tags:
+- docker
+- api-v2
+- pytorch
+- faster-rcnn
+- object detection
+- trainable
+- inference
+- pre-trained
+- image
+- video
+- general purpose
+tasks: []
+categories: []
+libraries:
+- Pytorch
