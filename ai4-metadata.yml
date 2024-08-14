@@ -17,7 +17,9 @@ links:
   docker_image: ai4oshub/ai4os-fasterrcnn-torch
   ai4_template: ai4-template/1.9.9
 tags:
+  - deep learning
   - object detection
+  - vo.imagine-ai.eu
 tasks:
   - Computer Vision
 categories:
@@ -25,7 +27,7 @@ categories:
   - AI4 pre trained
   - AI4 inference
 libraries:
-  - Pytorch
+  - PyTorch
 data-type:
   - Image
   - Video
