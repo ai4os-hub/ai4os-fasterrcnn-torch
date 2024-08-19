@@ -8,6 +8,7 @@ services:
     build:
       context: ./.sqa
       dockerfile: Dockerfile.cicd
+      pull: true
     command: >
       sh -c "git config --global --add safe.directory /srv &&
              git config --global --add safe.directory /srv/fasterrcnn_pytorch_training_pipeline &&
