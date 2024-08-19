@@ -10,6 +10,7 @@ services:
       dockerfile: Dockerfile.cicd
     command: >
       sh -c "git config --global --add safe.directory /srv &&
+             git config --global --add safe.directory /srv/fasterrcnn_pytorch_training_pipeline &&
              tail -f /dev/null"
     volumes:
       - type: bind
