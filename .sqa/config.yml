@@ -1,4 +1,8 @@
 # .sqa/config.yml - jenkins-pipeline-library configuration file
+environment:
+  JPL_DOCKERFORCEBUILD: "True"
+  LANG: C.UTF-8
+
 sqa_criteria:
   qc_style:
     repos:
@@ -21,8 +25,5 @@ sqa_criteria:
         commands:
         - sh -c 'git submodule update --init --remote --recursive'
         - tox -e qc.cov
-
-environment:
-  LANG: C.UTF-8
 
 timeout: 600
