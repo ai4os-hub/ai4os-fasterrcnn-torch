@@ -24,6 +24,6 @@ sqa_criteria:
         container: thisrepo-testing
         commands:
         - sh -c 'git submodule update --init --remote --recursive'
-        - tox -e qc.cov
+        - tox -e qc.sec
 
 timeout: 600
