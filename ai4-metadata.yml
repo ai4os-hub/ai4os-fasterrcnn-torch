@@ -17,7 +17,7 @@ description: |-
     - A video with bounding boxes delineating objects of interest throughout.
     - A JSON string accompanying each frame, supplying bounding box coordinates, object names within the boxes, and confidence scores for the detected objects. 
   Here, you can see an example of the output image:
-  <img class='fit', src='https://codebase.helmholtz.cloud/m-team/ai/ai4os-fasterrcnn-torch/-/blob/main/data/test_data/validation/catin_faster.png'/>  
+  <img class='fit', src='https://raw.githubusercontent.com/ai4os-hub/ai4os-fasterrcnn-torch/main/data/test_data/validation/catin_faster.png'/>  
 
 
   To train the model, you have the flexibility to choose between official PyTorch models trained on the COCO dataset [3], use any backbone from Torchvision classification models, or even define your own custom backbones. Your annotations should be saved as Pascal VOC XML formats. Please refer to the README to learn how to structure your data for training.
